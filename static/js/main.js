@@ -16,3 +16,15 @@ const passwordValidation = (inputFirst, inputSecond, button) => {
   });
 };
 passwordValidation(inputPass, inputPassConfirm, formButton);
+
+const surprise = document.querySelector("#a12397389213");
+const photo = document.querySelector(".calc__nothing-important-block-about-project-photo");
+let surpriseSum = 0;
+
+surprise.addEventListener("click", () => {
+  surpriseSum++;
+  if (surpriseSum >= 5) {
+    photo.classList.add("calc__nothing-important-block-about-project-photo--active");
+    document.querySelector(".container").classList.add("container--hidden");
+  }
+});
