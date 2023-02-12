@@ -8,7 +8,7 @@ const inputPassConfirm = document.querySelector("#passwordConfirm");
 
 const passwordValidation = (inputFirst, inputSecond, button) => {
   inputSecond.addEventListener("keyup", () => {
-    if (inputFirst.value === inputSecond.value) {
+    if (inputFirst.value === inputSecond.value && inputFirst.value !== "" && inputSecond.value !== "") {
       button.removeAttribute("disabled");
     } else if (inputFirst.value !== inputSecond.value) {
       button.setAttribute("disabled", "disabled");
@@ -21,10 +21,13 @@ const surprise = document.querySelector("#a12397389213");
 const photo = document.querySelector(".calc__nothing-important-block-about-project-photo");
 let surpriseSum = 0;
 
-surprise.addEventListener("click", () => {
-  surpriseSum++;
-  if (surpriseSum >= 5) {
-    photo.classList.add("calc__nothing-important-block-about-project-photo--active");
-    document.querySelector(".container").classList.add("container--hidden");
-  }
-});
+function surpriseFunc(surprise, photo) {
+  surprise.addEventListener("click", () => {
+    surpriseSum++;
+    if (surpriseSum >= 5) {
+      photo.classList.add("calc__nothing-important-block-about-project-photo--active");
+      document.querySelector(".container").classList.add("container--hidden");
+    }
+  });
+}
+surpriseFunc(surprise, photo);
