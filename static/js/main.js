@@ -22,7 +22,6 @@
     });
   }
 })();
-
 // Animation of scrolling
 const anchors = document.querySelectorAll('a[href*="#"]');
 
@@ -41,19 +40,26 @@ for (let anchor of anchors) {
 // Simple Validation of passwords
 const formButton = document.querySelector("#formButton");
 formButton.setAttribute("disabled", "disabled");
+const inputLogin = document.querySelector("#login");
 const inputPass = document.querySelector("#password");
-const inputPassConfirm = document.querySelector("#passwordConfirm");
 
-const passwordValidation = (inputFirst, inputSecond, button) => {
-  inputSecond.addEventListener("keyup", () => {
-    if (inputFirst.value === inputSecond.value && inputFirst.value !== "" && inputSecond.value !== "") {
+const formValidation = (inputFirst, inputSecond, button) => {
+  inputFirst.addEventListener("keyup", () => {
+    if (inputSecond.value !== "" && inputFirst.value !== "") {
       button.removeAttribute("disabled");
-    } else if (inputFirst.value !== inputSecond.value) {
+    } else {
+      button.setAttribute("disabled", "disabled");
+    }
+  });
+  inputSecond.addEventListener("keyup", () => {
+    if (inputSecond.value !== "" && inputFirst.value !== "") {
+      button.removeAttribute("disabled");
+    } else {
       button.setAttribute("disabled", "disabled");
     }
   });
 };
-passwordValidation(inputPass, inputPassConfirm, formButton);
+formValidation(inputPass, inputLogin, formButton);
 
 const surprise = document.querySelector("#a12397389213");
 const photo = document.querySelector(".calc__nothing-important-block-about-project-photo");
