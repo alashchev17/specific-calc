@@ -38,28 +38,38 @@ for (let anchor of anchors) {
   });
 }
 // Simple Validation of passwords
-const formButton = document.querySelector("#formButton");
-formButton.setAttribute("disabled", "disabled");
-const inputLogin = document.querySelector("#login");
-const inputPass = document.querySelector("#password");
+let formButton = document.querySelector("#formButton");
+function validation(form) {
+  let inputs = document.querySelectorAll(".login__input");
+  let inputsArray = Array.prototype.slice.call(inputs);
+  let errors = document.querySelectorAll(".login__error");
 
-const formValidation = (inputFirst, inputSecond, button) => {
-  inputFirst.addEventListener("keyup", () => {
-    if (inputSecond.value !== "" && inputFirst.value !== "") {
-      button.removeAttribute("disabled");
-    } else {
-      button.setAttribute("disabled", "disabled");
+  inputs.forEach((element, index) => {
+    if (element.value == "") {
+      element.classList.add("login__input--error");
+      errors[index].classList.remove("login__error--hidden");
+      errors[index].innerText = "Заповніть це поле";
+    } else if (element.value !== "") {
+      element.classList.remove("login__input--error");
+      errors[index].classList.add("login__error--hidden");
+      errors[index].innerText = "";
     }
   });
-  inputSecond.addEventListener("keyup", () => {
-    if (inputSecond.value !== "" && inputFirst.value !== "") {
-      button.removeAttribute("disabled");
-    } else {
-      button.setAttribute("disabled", "disabled");
+  return inputsArray.every(element => element.value !== "");
+}
+
+const loginForm = document.querySelector(".login__form");
+
+loginForm.addEventListener("submit", event => {
+  window.preventAction = true;
+  if (validation(this) == false) {
+    if (window.preventAction) {
+      event.preventDefault();
     }
-  });
-};
-formValidation(inputPass, inputLogin, formButton);
+  }
+  console.log(validation(this));
+  window.preventAction = false;
+});
 
 const surprise = document.querySelector("#a12397389213");
 const photo = document.querySelector(".calc__nothing-important-block-about-project-photo");
