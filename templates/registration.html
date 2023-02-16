@@ -52,12 +52,26 @@
           <h2 class="registration__title">Реєстрація</h2>
           <label class="registration__label" for="login">Логін</label>
           <div class="registration__block">
-            <input class="registration__input" type="text" id="login" name="login" placeholder="Введіть свій логін" />
+            <input
+              class="registration__input"
+              type="text"
+              id="login"
+              name="login"
+              data-required="true"
+              placeholder="Введіть свій логін"
+            />
             <span class="registration__error registration__error--hidden"></span>
           </div>
           <label class="registration__label" for="name">Ім'я</label>
           <div class="registration__block">
-            <input class="registration__input" type="text" id="name" name="name" placeholder="Введіть своє ім'я" />
+            <input
+              class="registration__input"
+              type="text"
+              id="name"
+              name="name"
+              data-required="true"
+              placeholder="Введіть своє ім'я"
+            />
             <span class="registration__error registration__error--hidden"></span>
           </div>
           <label class="registration__label" for="password">Пароль</label>
@@ -68,6 +82,8 @@
               id="password"
               name="password"
               placeholder="Введіть свій пароль"
+              data-required="true"
+              data-password-check="true"
             />
             <span class="registration__error registration__error--hidden"></span>
           </div>
@@ -79,6 +95,8 @@
               id="passwordConfirm"
               name="passwordConfirm"
               placeholder="Підтвердіть свій пароль"
+              data-required="true"
+              data-password-check="true"
             />
             <span class="registration__error registration__error--hidden"></span>
           </div>

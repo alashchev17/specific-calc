@@ -25,22 +25,25 @@
 // Simple Validation of passwords
 let formButton = document.querySelector("#formButton");
 
+let inputs = document.querySelectorAll(".registration__input");
 function validation(form) {
-  let inputs = document.querySelectorAll(".registration__input");
   let inputsArray = Array.prototype.slice.call(inputs);
   let errors = document.querySelectorAll(".registration__error");
 
   inputs.forEach((element, index) => {
-    if (element.value == "") {
-      element.classList.add("registration__input--error");
-      errors[index].classList.remove("registration__error--hidden");
-      errors[index].innerText = "Заповніть це поле";
-    } else if (element.value !== "") {
-      element.classList.remove("registration__input--error");
-      errors[index].classList.add("registration__error--hidden");
-      errors[index].innerText = "";
+    if (element.dataset.required) {
+      if (element.value == "") {
+        element.classList.add("registration__input--error");
+        errors[index].classList.remove("registration__error--hidden");
+        errors[index].innerText = "Заповніть це поле";
+      } else if (element.value !== "") {
+        element.classList.remove("registration__input--error");
+        errors[index].classList.add("registration__error--hidden");
+        errors[index].innerText = "";
+      }
     }
   });
+
   return inputsArray.every(element => element.value !== "");
 }
 
