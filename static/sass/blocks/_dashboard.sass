@@ -1,0 +1,69 @@
+.dashboard
+  width: 100vw
+  height: 100vh
+  overflow-y: auto
+  &__aside
+    display: flex
+    flex-direction: column
+    padding: 13px
+    background-color: $colorPrimary
+    max-width: 465px
+    height: 100%
+    overflow-y: auto
+  &__logo
+    padding: 30px
+    margin-bottom: 50px
+  &__profile
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 15px 19px 15px 30px
+    background-color: $backgroundSecondary
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    border-radius: 10px
+    margin-bottom: 75px
+    &-action
+      font-weight: 400
+      color: rgba($colorSecondary, 0.5)
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 20px
+    list-style: none
+    padding: 0 0 0 28px
+    margin: 0
+    &-item
+      padding: 25px 0
+      
+  &__link
+    display: flex
+    align-items: center
+    gap: 40px
+    font-weight: 400
+    font-size: 24px
+    line-height: 29px
+    &-text
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 3px
+        background-color: $colorSecondary
+        left: 0
+        bottom: -10px
+        transition: all 0.5s
+        transform: scaleX(0)
+    &:hover
+      .dashboard__link-text
+        &:after
+          transform: scaleX(1)
+    &--active
+      .dashboard__link-text
+        &:after
+          transform: scaleX(1)
+  &__icon
+    max-width: 40px
+    max-height: auto
