@@ -32,7 +32,7 @@ function createPosition() {
 
   form.addEventListener("submit", event => {
     event.preventDefault();
-    if (input.value.trim().length === 0) {
+    if (input.value.trim().length === 0 || input.value.trim() === "Посад немає") {
       alert("Введіть коректну назву посади!");
     } else {
       if (position.innerText === "Посад немає") {
