@@ -1,13 +1,15 @@
 .dashboard
   width: 100vw
   height: 100vh
-  overflow-y: auto
+  overflow: hidden
+  display: flex
   &__aside
     display: flex
     flex-direction: column
     padding: 13px
     background-color: $colorPrimary
     max-width: 465px
+    width: 100%
     height: 100%
     overflow-y: auto
   &__logo
@@ -18,12 +20,15 @@
     align-items: center
     justify-content: space-between
     padding: 15px 19px 15px 30px
-    background-color: $backgroundSecondary
+    background-color: $colorPrimary
     font-weight: 500
     font-size: 16px
     line-height: 20px
     border-radius: 10px
     margin-bottom: 75px
+    transition: background-color 0.3s ease-in-out
+    &:hover
+      background-color: $backgroundSecondary
     &-action
       font-weight: 400
       color: rgba($colorSecondary, 0.5)
@@ -64,4 +69,11 @@
       .dashboard__link-text
         &:after
           transform: scaleX(1)
+  &__content
+    width: 100%
+    max-width: 100%
+    overflow-y: auto
   &__icon
+  &__positions
+    padding: 59px 78px
+    color: $colorPrimary
