@@ -29,7 +29,7 @@
     &-item:not(:last-child)
       margin-bottom: 40px
     &-input
-      background: #72727259
+      background-color: #CECECE
       padding: 17px 25px
       border-radius: 7px
       margin-bottom: 53px
@@ -37,3 +37,22 @@
     &-button
       cursor: pointer
       padding: 14px 48px
+  &__select
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    &-container
+      width: 100%
+      max-width: 480px
+      margin-bottom: 50px
+    &-trigger
+      background-color: #CECECE
+      justify-content: start
+      padding: 0 25px
+    &-options
+      background-color: #CECECE
+    &-option
+      justify-content: start
+      padding: 0 25px
+      &:hover
+        background-color: darken(#CECECE, 10%)

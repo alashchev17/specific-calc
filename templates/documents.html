@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="shortcut icon" href="../static/images/icons/favicon.svg" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="preloader" class="preloader">
+      <img src="../static/images/icons/logotypeSecondary.svg" alt="Premium Calculator" class="preloader__image" />
+    </div>
+    <main class="calc">
+      <div class="dashboard calc__dashboard">
+        <aside class="dashboard__aside">
+          <a href="./dashboard.html" class="logo dashboard__logo">
+            <img src="../static/images/icons/logotypeSecondary.svg" alt="Premium Calculator Logotype" />
+          </a>
+          <a href="#" class="dashboard__profile">Костянтин Шабатура</a>
+          <nav class="dashboard__nav">
+            <ul class="dashboard__list">
+              <li class="dashboard__list-item">
+                <a href="./homepage.html" class="dashboard__link">
+                  <img class="dashboard__icon" src="../static/images/icons/homeIcon.svg" alt="" />
+                  <span class="dashboard__link-text">Головна</span>
+                </a>
+              </li>
+              <li class="dashboard__list-item">
+                <a href="./positions.html" class="dashboard__link">
+                  <img src="../static/images/icons/positionsIcon.svg" alt="" class="dashboard__icon" />
+                  <span class="dashboard__link-text">Посади</span>
+                </a>
+              </li>
+              <li class="dashboard__list-item">
+                <a href="./employees.html" class="dashboard__link">
+                  <img src="../static/images/icons/employeesIcon.svg" alt="" class="dashboard__icon" />
+                  <span class="dashboard__link-text">Працівники</span>
+                </a>
+              </li>
+              <li class="dashboard__list-item">
+                <a href="./documents.html" class="dashboard__link dashboard__link--active">
+                  <img src="../static/images/icons/documentsIcon.svg" alt="" class="dashboard__icon" />
+                  <span class="dashboard__link-text">Документи</span>
+                </a>
+              </li>
+              <li class="dashboard__list-item">
+                <a href="./settings.html" class="dashboard__link">
+                  <img src="../static/images/icons/settingsIcon.svg" alt="" class="dashboard__icon" />
+                  <span class="dashboard__link-text">Налаштування</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="dashboard__content">
+          <div class="documents dashboard__documents">
+            <h1 class="documents__title">Завантаження звіту</h1>
+            <p class="documents__description">
+              Тут Ви можете завантажити звіт про Ваші посади, ефективність та їх премію за місяць
+            </p>
+            <form action="#" method="POST" class="documents__form">
+              <select name="position" id="original-select" class="documents__select">
+                <option value="Оберіть посаду">Оберіть посаду</option>
+                <option value="Якась посада із БД">Якась посада із БД</option>
+                <option value="Ще одна посада">Ще одна посада</option>
+              </select>
+              <!-- This is the container for the custom select -->
+              <div class="custom-select-container documents__select-container">
+                <div class="custom-select-trigger documents__select-trigger">Оберіть формулу</div>
+                <div class="custom-select-options documents__select-options">
+                  <div class="custom-select-option documents__select-option" data-value="1">Якась посада із БД</div>
+                  <div class="custom-select-option documents__select-option" data-value="2">Ще одна посада</div>
+                  <div class="custom-select-option documents__select-option" data-value="3">
+                    Дизайнери, потримайте моє пиво
+                  </div>
+                </div>
+              </div>
+              <button class="button documents__button button--primary" type="submit">Завантажити звіт</button>
+            </form>
+          </div>
+          <!-- /.documents -->
+          <!-- сюди контент піхаємо -->
+        </div>
+        <!-- /.dashboard__content -->
+      </div>
+      <!-- /.dashboard -->
+    </main>
+
+    <script src="../static/js/preloader.js"></script>
+    <script src="../static/js/custom-select.js"></script>
+    <script src="../static/js/dashboard/documents.js"></script>
+  </body>
+</html>

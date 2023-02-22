@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="shortcut icon" href="../static/images/icons/favicon.svg" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="preloader" class="preloader">
+      <img src="../static/images/icons/logotypeSecondary.svg" alt="Premium Calculator" class="preloader__image" />
+    </div>
+    <main class="calc">
+      <div class="dashboard calc__dashboard">
+        <aside class="dashboard__aside">
+          <a href="./dashboard.html" class="logo dashboard__logo">
+            <img src="../static/images/icons/logotypeSecondary.svg" alt="Premium Calculator Logotype" />
+          </a>
+          <a href="#" class="dashboard__profile">Костянтин Шабатура</a>
+          <nav class="dashboard__nav">
+            <ul class="dashboard__list">
+              <li class="dashboard__list-item">
+                <a href="./" class="dashboard__link">
+                  <img class="dashboard__icon" src="../static/images/icons/homeIcon.svg" alt="" />
+                  <span class="dashboard__link-text">Головна</span>
+                </a>
+              </li>
+              <li class="dashboard__list-item">
+                <a href="./positions.html" class="dashboard__link">
+                  <img src="../static/images/icons/positionsIcon.svg" alt="" class="dashboard__icon" />
+                  <span class="dashboard__link-text">Посади</span>
+                </a>
+              </li>
+              <li class="dashboard__list-item">
+                <a href="./employees.html" class="dashboard__link dashboard__link--active">
+                  <img src="../static/images/icons/employeesIcon.svg" alt="" class="dashboard__icon" />
+                  <span class="dashboard__link-text">Працівники</span>
+                </a>
+              </li>
+              <li class="dashboard__list-item">
+                <a href="./documents.html" class="dashboard__link">
+                  <img src="../static/images/icons/documentsIcon.svg" alt="" class="dashboard__icon" />
+                  <span class="dashboard__link-text">Документи</span>
+                </a>
+              </li>
+              <li class="dashboard__list-item">
+                <a href="./settings.html" class="dashboard__link">
+                  <img src="../static/images/icons/settingsIcon.svg" alt="" class="dashboard__icon" />
+                  <span class="dashboard__link-text">Налаштування</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="dashboard__content">
+          <div class="employees dashboard__employees">
+            <h1 class="employees__title">Працівники</h1>
+            <div class="employees__wrapper">
+              <div class="employees__search">
+                <form action="#" method="GET" class="employees__search-form">
+                  <input type="text" class="employees__search-input" placeholder="Пошук" />
+                </form>
+              </div>
+              <!-- /.employees__search -->
+              <a href="./add_employee.html" class="employees__link">
+                <img
+                  src="../static/images/icons/addEmployee.svg"
+                  alt="Додати нового працівника"
+                  class="employees__icon"
+                />
+              </a>
+            </div>
+            <!-- /.employees__wrapper -->
+            <div class="employees__cards">
+              <div class="employees__item">
+                <div class="employees__row">
+                  <span class="employees__item-text">Костянтин Шабатура</span>
+                  <span class="employees__item-text">
+                    Оклад
+                    <span class="employees__value">10000</span>
+                  </span>
+                  <span class="employees__item-text">
+                    Посада
+                    <span class="employees__value">Тім-лід</span>
+                  </span>
+                  <a href="#" class="employees__switcher">
+                    <span class="employees__switcher-item"></span>
+                    <span class="employees__switcher-item"></span>
+                  </a>
+                </div>
+                <!-- /.employees__row -->
+                <div class="employees__row employees__accordion employees__row--hidden">
+                  <span class="employees__item-text">
+                    Премія за формулою
+                    <span class="employees__value">Нова формула</span>
+                  </span>
+                </div>
+                <!-- /.employees__row -->
+              </div>
+              <!-- /.employees__item -->
+              <div class="employees__item">
+                <div class="employees__row">
+                  <span class="employees__item-text">Костянтин Шабатура</span>
+                  <span class="employees__item-text">
+                    Оклад
+                    <span class="employees__value">10000</span>
+                  </span>
+                  <span class="employees__item-text">
+                    Посада
+                    <span class="employees__value">Тім-лід</span>
+                  </span>
+                  <a href="#" class="employees__switcher">
+                    <span class="employees__switcher-item"></span>
+                    <span class="employees__switcher-item"></span>
+                  </a>
+                </div>
+                <!-- /.employees__row -->
+                <div class="employees__row employees__accordion employees__row--hidden">
+                  <span class="employees__item-text">
+                    Премія за формулою
+                    <span class="employees__value">Нова формула</span>
+                  </span>
+                </div>
+                <!-- /.employees__row -->
+              </div>
+              <!-- /.employees__item -->
+              <div class="employees__item">
+                <div class="employees__row">
+                  <span class="employees__item-text">Костянтин Шабатура</span>
+                  <span class="employees__item-text">
+                    Оклад
+                    <span class="employees__value">10000</span>
+                  </span>
+                  <span class="employees__item-text">
+                    Посада
+                    <span class="employees__value">Тім-лід</span>
+                  </span>
+                  <a href="#" class="employees__switcher">
+                    <span class="employees__switcher-item"></span>
+                    <span class="employees__switcher-item"></span>
+                  </a>
+                </div>
+                <!-- /.employees__row -->
+                <div class="employees__row employees__accordion employees__row--hidden">
+                  <span class="employees__item-text">
+                    Премія за формулою
+                    <span class="employees__value">Нова формула</span>
+                  </span>
+                </div>
+                <!-- /.employees__row -->
+              </div>
+              <!-- /.employees__item -->
+              <div class="employees__item">
+                <div class="employees__row">
+                  <span class="employees__item-text">Костянтин Шабатура</span>
+                  <span class="employees__item-text">
+                    Оклад
+                    <span class="employees__value">10000</span>
+                  </span>
+                  <span class="employees__item-text">
+                    Посада
+                    <span class="employees__value">Тім-лід</span>
+                  </span>
+                  <a href="#" class="employees__switcher">
+                    <span class="employees__switcher-item"></span>
+                    <span class="employees__switcher-item"></span>
+                  </a>
+                </div>
+                <!-- /.employees__row -->
+                <div class="employees__row employees__accordion employees__row--hidden">
+                  <span class="employees__item-text">
+                    Премія за формулою
+                    <span class="employees__value">Нова формула</span>
+                  </span>
+                </div>
+                <!-- /.employees__row -->
+              </div>
+              <!-- /.employees__item -->
+              <div class="employees__item">
+                <div class="employees__row">
+                  <span class="employees__item-text">Костянтин Шабатура</span>
+                  <span class="employees__item-text">
+                    Оклад
+                    <span class="employees__value">10000</span>
+                  </span>
+                  <span class="employees__item-text">
+                    Посада
+                    <span class="employees__value">Тім-лід</span>
+                  </span>
+                  <a href="#" class="employees__switcher">
+                    <span class="employees__switcher-item"></span>
+                    <span class="employees__switcher-item"></span>
+                  </a>
+                </div>
+                <!-- /.employees__row -->
+                <div class="employees__row employees__accordion employees__row--hidden">
+                  <span class="employees__item-text">
+                    Премія за формулою
+                    <span class="employees__value">Нова формула</span>
+                  </span>
+                </div>
+                <!-- /.employees__row -->
+              </div>
+              <!-- /.employees__item -->
+              <div class="employees__item">
+                <div class="employees__row">
+                  <span class="employees__item-text">Костянтин Шабатура</span>
+                  <span class="employees__item-text">
+                    Оклад
+                    <span class="employees__value">10000</span>
+                  </span>
+                  <span class="employees__item-text">
+                    Посада
+                    <span class="employees__value">Тім-лід</span>
+                  </span>
+                  <a href="#" class="employees__switcher">
+                    <span class="employees__switcher-item"></span>
+                    <span class="employees__switcher-item"></span>
+                  </a>
+                </div>
+                <!-- /.employees__row -->
+                <div class="employees__row employees__accordion employees__row--hidden">
+                  <span class="employees__item-text">
+                    Премія за формулою
+                    <span class="employees__value">Нова формула</span>
+                  </span>
+                </div>
+                <!-- /.employees__row -->
+              </div>
+              <!-- /.employees__item -->
+              <div class="employees__item">
+                <div class="employees__row">
+                  <span class="employees__item-text">Костянтин Шабатура</span>
+                  <span class="employees__item-text">
+                    Оклад
+                    <span class="employees__value">10000</span>
+                  </span>
+                  <span class="employees__item-text">
+                    Посада
+                    <span class="employees__value">Тім-лід</span>
+                  </span>
+                  <a href="#" class="employees__switcher">
+                    <span class="employees__switcher-item"></span>
+                    <span class="employees__switcher-item"></span>
+                  </a>
+                </div>
+                <!-- /.employees__row -->
+                <div class="employees__row employees__accordion employees__row--hidden">
+                  <span class="employees__item-text">
+                    Премія за формулою
+                    <span class="employees__value">Нова формула</span>
+                  </span>
+                </div>
+                <!-- /.employees__row -->
+              </div>
+              <!-- /.employees__item -->
+            </div>
+            <!-- /.employees__cards -->
+          </div>
+          <!-- /.employees -->
+          <!-- сюди контент піхаємо -->
+        </div>
+        <!-- /.dashboard__content -->
+      </div>
+      <!-- /.dashboard -->
+    </main>
+
+    <script src="../static/js/preloader.js"></script>
+    <script src="../static/js/dashboard/employee.js"></script>
+  </body>
+</html>

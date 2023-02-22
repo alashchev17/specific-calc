@@ -8,7 +8,7 @@
     flex-direction: column
     padding: 13px
     background-color: $colorPrimary
-    max-width: 465px
+    max-width: 380px
     width: 100%
     height: 100%
     overflow-y: auto
@@ -16,22 +16,14 @@
     padding: 30px
     margin-bottom: 50px
   &__profile
-    display: flex
-    align-items: center
-    justify-content: space-between
+    text-align: center
     padding: 15px 19px 15px 30px
-    background-color: $colorPrimary
+    background-color: $backgroundSecondary
     font-weight: 500
-    font-size: 16px
+    font-size: 18px
     line-height: 20px
     border-radius: 10px
     margin-bottom: 75px
-    transition: background-color 0.3s ease-in-out
-    &:hover
-      background-color: $backgroundSecondary
-    &-action
-      font-weight: 400
-      color: rgba($colorSecondary, 0.5)
   &__list
     display: flex
     flex-direction: column
@@ -74,6 +66,9 @@
     max-width: 100%
     overflow-y: auto
   &__icon
-  &__positions
+  &__positions, &__employees, &__settings, &__documents
     padding: 59px 78px
+    color: $colorPrimary
+  &__homepage
+    padding: 50px 59px
     color: $colorPrimary
