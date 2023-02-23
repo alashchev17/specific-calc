@@ -18,7 +18,10 @@
     window.addEventListener("load", () => {
       setTimeout(() => {
         preloader.classList.add("preloader--hidden");
-      }, 1500);
+        setTimeout(() => {
+          preloader.remove();
+        }, 500);
+      }, 1000);
     });
   }
 })();
