@@ -1,0 +1,58 @@
+{%extends "basic_dashboard.html"%} {%block title%}
+<title>Створення формули | Premium Calculator</title>
+{%endblock%} {%block aside%}
+<aside class="dashboard__aside">
+  <a href="/home" class="logo dashboard__logo">
+    <img src="../static/images/icons/logotypeSecondary.svg" alt="Premium Calculator Logotype" />
+  </a>
+  <a href="#" class="dashboard__profile">Костянтин Шабатура</a>
+  <nav class="dashboard__nav">
+    <ul class="dashboard__list">
+      <li class="dashboard__list-item">
+        <a href="/home" class="dashboard__link">
+          <img class="dashboard__icon" src="../static/images/icons/homeIcon.svg" alt="" />
+          <span class="dashboard__link-text">Головна</span>
+        </a>
+      </li>
+      <li class="dashboard__list-item">
+        <a href="/view_positions" class="dashboard__link">
+          <img src="../static/images/icons/positionsIcon.svg" alt="" class="dashboard__icon" />
+          <span class="dashboard__link-text">Посади</span>
+        </a>
+      </li>
+      <li class="dashboard__list-item">
+        <a href="/view_employees" class="dashboard__link">
+          <img src="../static/images/icons/employeesIcon.svg" alt="" class="dashboard__icon" />
+          <span class="dashboard__link-text">Працівники</span>
+        </a>
+      </li>
+      <li class="dashboard__list-item">
+        <a href="/documents" class="dashboard__link">
+          <img src="../static/images/icons/documentsIcon.svg" alt="" class="dashboard__icon" />
+          <span class="dashboard__link-text">Документи</span>
+        </a>
+      </li>
+      <li class="dashboard__list-item">
+        <a href="/settings" class="dashboard__link">
+          <img src="../static/images/icons/settingsIcon.svg" alt="" class="dashboard__icon" />
+          <span class="dashboard__link-text">Налаштування</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+{%endblock%} {%block content%}
+<div class="function dashboard__function">
+  <h1 class="function__title">Введіть назву для нової формули</h1>
+  <form class="function__form" name="function_form" method="POST" action="/add_function">
+    <label class="function__label">
+      Назва формули
+      <input class="function__input" type="text" name="function_name" />
+    </label>
+    <button class="button function__button button--primary" name="submit" type="submit">Зберегти</button>
+  </form>
+</div>
+<!-- /.function -->
+{%endblock%} {%block scripts%}
+<script src="../static/js/preloader.js"></script>
+{%endblock%}

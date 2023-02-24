@@ -64,26 +64,15 @@
           <div class="documents dashboard__documents">
             <h1 class="documents__title">Завантаження звіту</h1>
             <p class="documents__description">
-              Тут Ви можете завантажити звіт про Ваші посади, ефективність та їх премію за місяць
+              Тут Ви можете згенерувати звіт про Ваші посади, ефективність та їх премію за місяць
             </p>
             <form action="#" method="POST" class="documents__form">
-              <select name="position" id="original-select" class="documents__select">
+              <select name="position" id="original-select" class="select documents__select">
                 <option value="Оберіть посаду">Оберіть посаду</option>
                 <option value="Якась посада із БД">Якась посада із БД</option>
                 <option value="Ще одна посада">Ще одна посада</option>
               </select>
-              <!-- This is the container for the custom select -->
-              <div class="custom-select-container documents__select-container">
-                <div class="custom-select-trigger documents__select-trigger">Оберіть формулу</div>
-                <div class="custom-select-options documents__select-options">
-                  <div class="custom-select-option documents__select-option" data-value="1">Якась посада із БД</div>
-                  <div class="custom-select-option documents__select-option" data-value="2">Ще одна посада</div>
-                  <div class="custom-select-option documents__select-option" data-value="3">
-                    Дизайнери, потримайте моє пиво
-                  </div>
-                </div>
-              </div>
-              <button class="button documents__button button--primary" type="submit">Завантажити звіт</button>
+              <button class="button documents__button button--primary" type="submit">Згенерувати звіт</button>
             </form>
           </div>
           <!-- /.documents -->
@@ -95,7 +84,6 @@
     </main>
 
     <script src="../static/js/preloader.js"></script>
-    <script src="../static/js/custom-select.js"></script>
     <script src="../static/js/dashboard/documents.js"></script>
   </body>
 </html>
