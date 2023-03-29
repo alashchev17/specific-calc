@@ -1,9 +1,9 @@
 function createPosition() {
   let form = document.querySelector("#positions_form");
-  // let positionsBlock = document.querySelector(".positions__created");
-  // let position = document.querySelector(".positions__block-item");
+  let positionsBlock = document.querySelector(".positions__created");
+  let position = document.querySelector(".positions__block-item");
   let input = document.querySelector(".positions__block-input");
-  // let value = "";
+  let value = "";
 
   function validation(form) {
     let allPositions = document.querySelectorAll(".positions__block-item");
@@ -38,19 +38,18 @@ function createPosition() {
           alert("Введіть коректну назву посади!");
         }
       }
+    } else {
+      if (position.innerText === "Посад немає") {
+        position.remove();
+      }
+      value = input.value;
+      let newPosition = document.createElement("span");
+      newPosition.classList.add("positions__block-item");
+      newPosition.innerText = value;
+      positionsBlock.appendChild(newPosition);
+      input.value = "";
     }
     window.preventAction = false;
-    // else {
-    //   if (position.innerText === "Посад немає") {
-    //     position.remove();
-    //   }
-    //   value = input.value;
-    //   let newPosition = document.createElement("span");
-    //   newPosition.classList.add("positions__block-item");
-    //   newPosition.innerText = value;
-    //   positionsBlock.appendChild(newPosition);
-    //   input.value = "";
-    // }
   });
 }
 
